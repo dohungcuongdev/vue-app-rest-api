@@ -1,10 +1,17 @@
-Follow these following links:
+*** I have followed these following links to make debugging worked in VScode with Firefox: ***
+
 1. https://medium.com/@marshallswain/debugging-a-new-vue-cli-app-with-vs-code-ade4945e75f0
 
 2. https://vuejs.org/v2/cookbook/debugging-in-vscode.html
 
 
+
 Step to reproduce: (some command may need to use "sudo" on Mac OS)
+
+*** Note: IMPORTANT ***
+- If you are going to creata a new project: follow all the steps from 1 to 12
+- Otherwise, if you just want to clone source code, please ignore the steps from 1 to 6 and begin reading at step 7
+
 1. run "npm remove -g vue-cli"
 2. run "npm install -g @vue/cli"
 3. run "vue create vue-app-rest-api"
@@ -12,26 +19,15 @@ Step to reproduce: (some command may need to use "sudo" on Mac OS)
 5. Create new file "vue.config.js" with the content as below:
 
     module.exports = {
-    configureWebpack: {
-        devtool: 'source-map'
-    }
+      configureWebpack: {
+          devtool: 'source-map'
+      }
     }
 
 6. Create folder ".vscode" containing file "lanch.json" with the content as below:
   {
     "version": "0.2.0",
     "configurations": [
-      {
-        "type": "chrome",
-        "request": "launch",
-        "name": "vuejs: chrome",
-        "url": "http://localhost:8081",
-        "webRoot": "${workspaceFolder}/src",
-        "breakOnLoad": true,
-        "sourceMapPathOverrides": {
-          "webpack:///./src/*": "${webRoot}/*"
-        }
-      },
       {
         "type": "firefox",
         "request": "launch",

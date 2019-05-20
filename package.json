@@ -5,7 +5,10 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "test:unit": "vue-cli-service test:unit",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -13,15 +16,19 @@
     "core-js": "^2.6.5",
     "vue": "^2.6.10",
     "vue-axios": "^2.1.4",
-    "vue-router": "^3.0.6"
+    "vue-router": "^3.0.6",
+    "gh-pages": "^1.2.0"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
+    "@vue/cli-plugin-unit-mocha": "^3.0.0-rc.10",
     "@vue/cli-service": "^3.7.0",
+    "@vue/test-utils": "^1.0.0-beta.20",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "chai": "^4.1.2",
     "vue-template-compiler": "^2.5.21"
   },
   "eslintConfig": {
@@ -45,6 +52,7 @@
   },
   "browserslist": [
     "> 1%",
-    "last 2 versions"
+    "last 2 versions",
+    "not ie <= 8"
   ]
 }

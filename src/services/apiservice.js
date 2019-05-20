@@ -15,36 +15,50 @@ export class APIService {
 
     getData() {
         const url = `${this.apiUrl}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.get(url).then(response => response.data);
     }
 
     getDataBy(param) {
         const url = `${this.apiUrl}/${param}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.get(url).then(response => response.data);
     }
 
     insertData(contact) {
         const url = `${this.apiUrl}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.post(url,contact);
     }
 
     updateDataBy(data, param) {
         const url = `${this.apiUrl}/${param}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.put(url,data);
     }
 
     updateDataByID(data) {
         const url = `${this.apiUrl}/${data.id}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.put(url,data);
     }
 
     deleteDataBy(data, param){
         const url = `${this.apiUrl}/${param}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.delete(url,data);
     }
 
     deleteDataByID(data) {
         const url = `${this.apiUrl}/${data.id}`;
+        // eslint-disable-next-line
+        console.log(url)
         return axios.delete(url,data);
     }
 

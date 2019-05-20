@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Customers from './views/Customers.vue'
 import Contacts from './views/Contacts.vue'
+import Contact from './views/Contact.vue'
 import CustomerDetails from './views/CustomerDetails.vue'
 
 Vue.use(Router)
@@ -26,6 +27,11 @@ const router =  new Router({
       path: '/contacts',
       name: 'contacts',
       component: Contacts
+    },
+    {
+      path: '/contacts/:id',
+      name: 'contact',
+      component: Contact
     }
   ]
 })
