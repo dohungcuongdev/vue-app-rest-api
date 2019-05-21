@@ -6,11 +6,22 @@ export class APIService {
     apiUrl = '';
 
     constructor(endpoint) {
-        if(endpoint == null) {
+        if(endpoint == null || endpoint === '') {
             this.apiUrl = `${SERVICE_URL}`;
         } else {
             this.apiUrl = `${SERVICE_URL}/${endpoint}`;
         }
+    }
+
+    // if URL is not provided from const SERVICE_URL
+    changeApiUrlTo(apiUrl) {
+        this.apiUrl = apiUrl;
+    }
+
+    getDataFromUrl(url) {
+        // eslint-disable-next-line
+        console.log(url)
+        return axios.get(url).then(response => response.data);
     }
 
     getData() {

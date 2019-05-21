@@ -22,7 +22,13 @@
         <p>Clicking on a Card Displays the name below. This is to demonstrate passing data from parent to child component</p>
         <p>"Click for more details" Redirects to a new page which displays the customer information</p>
 
-        <router-link to="contacts" v-if="this.$route.path !== '/contacts'">Go to Contacts page</router-link>  
+        <router-link to="contacts" v-if="this.$route.path !== '/contacts'">Go to Contacts page</router-link>
+        <br/>
+        <router-link to="sonar-qube" v-if="this.$route.path !== '/sonar-qube'">Go to Sonar Qube page</router-link>
+        <br/>
+        <router-link to="sonar-qube/1" v-if="this.$route.path !== '/sonar-qube/1'">Go to Sonar Qube Pagination page</router-link>
+        <br/>
+        <router-link to="search-projects" v-if="this.$route.path !== 'search-projects'">Go to Search Projects page</router-link>
         <div class="card centeralign addmargin" style="width: 18rem;" v-for="customer in customerlist" :key="customer.id">
             <div class="card-body" v-on:click="setSelectedCustomer(customer.name)">
                 <h5 class="card-title">{{customer.name}}</h5>

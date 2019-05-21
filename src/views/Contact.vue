@@ -2,6 +2,14 @@
 input:read-only {
   background-color: lightgray;
 }
+
+input.input-id {
+  width: 30%;
+}
+
+td.input-id {
+  width: 40%;
+}
 </style>
 
 <template>
@@ -19,14 +27,13 @@ input:read-only {
           <th>Address</th>
           <th v-if="hasNoValue(contact.id)">Add</th>
           <th v-else>Update</th>
-          <th>Delete</th>
         </tr>
       </thead>
       <tbody>
         <tr>
 
-          <td v-if="hasNoValue(contact.id)"><input type="id" ref="id" :value="$route.params.id"></td>
-          <td v-else><input type="id" ref="id" :value="contact.id" readonly></td>
+          <td v-if="hasNoValue(contact.id)"><input class="input-id" type="id" ref="id" :value="$route.params.id"></td>
+          <td v-else><input class="input-id" type="id" ref="id" :value="contact.id" readonly></td>
 
           <td><input type="first_name" ref="first_name" :value="contact.first_name"></td>
 
@@ -40,10 +47,6 @@ input:read-only {
 
           <td v-if="hasNoValue(contact.id)"><button @click.prevent="saveContact('add')">Add</button></td>
           <td v-else><button @click.prevent="saveContact('update')">Update</button></td>
-
-          <td>
-            <button class="btn btn-danger" @click="deleteContact(contact)">X</button>
-          </td>
         </tr>
       </tbody>
     </table>
@@ -55,7 +58,7 @@ input:read-only {
 </template>
 
 <script>
-import {Contacts} from './Contacts'
+import Contacts from './Contacts.vue'
 
 import {ContactService} from '../services/contactservice'
 const contactService = new ContactService(); //create new instance
@@ -72,6 +75,8 @@ export default {
     },
     methods: {
         getSingeContact() {
+          // eslint-disable-next-line
+          console.log(this.$route.params.id);
           contactService.getContactDataByID(this.$route.params.id).then((response) => {
              this.contact = response;
              // eslint-disable-next-line
@@ -79,7 +84,9 @@ export default {
           }, error => {
               // eslint-disable-next-line
               console.log("No contact matched the ID, need to create");
-              //this.contact = {};
+              this.contact = {};
+
+              // eslint-disable-next-line
               //console.error(error);
           });
         },
@@ -107,7 +114,7 @@ export default {
                 contactService.addContact(newContact).then((response) => {
                     if(response) {
                         alert("Contact was added");
-                        this.$router.replace({ path: '/contacts' })
+                          this.$router.replace({ path: '/contacts' })
                         }
                     }, error => {
                         // eslint-disable-next-line
@@ -118,7 +125,7 @@ export default {
                 contactService.editContact(newContact).then((response) => {
                     if(response) {
                         this.contact = newContact;
-                        alert("Contact was edited");
+                          alert("Contact was edited");
                         }
                     }, error => {
                         // eslint-disable-next-line
@@ -131,7 +138,24 @@ export default {
         }
     },
     mounted() {
+        this.testInherite();
         this.getSingeContact();
+    },
+
+    /* Fetching After Navigation
+    When using this approach, we navigate and render the incoming component 
+    immediately, and fetch data in the component's created hook. It gives us the 
+    opportunity to display a loading state while the data is being fetched over the 
+    network, and we can also handle loading differently for each view.
+    Let's assume we have a Contact component that needs to fetch the data for a contact 
+    based on $route.params.id:*/
+    watch: { 
+      // call again the method if the route changes
+      '$route': 'getSingeContact' 
+      /* without this code, after load the component and access the view by pressing
+       address bar, the contact will be not changed, you can try to reproduce this
+       problem in CustomerDetails Component
+       */
     },
 }
 

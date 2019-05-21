@@ -61,7 +61,7 @@ import concat from '../filters/default/concat'; //filter
 import {firstMissingID} from '../services/helper' //helper function
 
 export default {
-    name: 'ListContacts',
+    name: 'Contacts',
     data() {
         return {
             contacts: [],
@@ -107,12 +107,16 @@ export default {
         }, 
         getfirstMissingContactID() {
           return firstMissingID(this.contacts);
+        },
+        testInherite() {
+          // eslint-disable-next-line
+          console.log("Test Inherite")
         }
 
     },
     mounted() {
         this.getAllContacts();
-    },
+    }
 }
 
 </script>

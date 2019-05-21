@@ -13,7 +13,6 @@ module.exports = {
       port,
       host,
       hotOnly: true,
-      disableHostCheck: true,
       clientLogLevel: 'warning',
       inline: true,
       headers: {
@@ -21,5 +20,11 @@ module.exports = {
         'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
         'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
       },
+      /*Workaround to fix [WDS] Disconnected!
+      //https://github.com/vuejs/vue-cli/issues/3173#issuecomment-449573901
+      https://github.com/vuejs/vue/issues/9249*/
+      disableHostCheck: true, // process.env.NODE_ENV === 'development'
+      //https: true,
+      useLocalIp: false,
     }
   }

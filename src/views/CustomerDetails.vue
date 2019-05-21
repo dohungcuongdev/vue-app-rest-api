@@ -70,7 +70,7 @@ export default {
         goToMainPage: function() {
             this.$router.push("/customers");
         },
-    }
+    },
 }
 
 </script>
