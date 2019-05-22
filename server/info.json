@@ -1,973 +1,983 @@
 {
-	"contacts": [
-		{
-			"id": 1,
-			"first_name": "Cuong",
-			"last_name": "Do",
-			"email": "cuongdo@gmail.com",
-			"phone": "0908998923",
-			"address": "HCMC"
-		}
-	],
-	"projects": [
-		{
-			"id": 1,
-			"name": "Simple Java Gradle Project",
-			"bugs": [
-				{
-					"name": "The return value of \"toString\" must be used."
-				}
-			],
-			"codeSmells": [
-				{
-					"name": "Use a logger to log this exception."
-				},
-				{
-					"name": "2 duplicated blocks of code must be removed"
-				}
-			],
-			"debt": {
-				"rating": "B",
-				"debt_ratio": 9.5,
-				"effort_to_reach_A": 66,
-				"debt": 139
-			},
-			"coverage": {
-				"lines_to_cover": 28,
-				"uncovered_lines": 26,
-				"line_coverage": 7.1,
-				"coverage": 7.1
-			},
-			"unitTests": [
-				{
-					"dir": "src/test/java/basic/demo/AppTest.java",
-					"duration": 3,
-					"success": 100
-				}
-			],
-			"duplications": [
-				{
-					"density": 28.2,
-					"duplicate_lines": 22,
-					"duplicate_files": 1,
-					"duplicate_blocks": 2
-				}
-			],
-			"done": false
-		},
-		{
-			"id": 2,
-			"name": "Simple Java Ant Project",
-			"bugs": [],
-			"codeSmells": [
-				{
-					"name": "Use a logger to log this exception."
-				},
-				{
-					"name": "2 duplicated blocks of code must be removed"
-				}
-			],
-			"debt": {
-				"rating": "B",
-				"debt_ratio": 9.5,
-				"effort_to_reach_A": 66,
-				"debt": 139
-			},
-			"coverage": {
-				"lines_to_cover": 28,
-				"uncovered_lines": 26,
-				"line_coverage": 7.1,
-				"coverage": 7.1
-			},
-			"unitTests": [
-				{
-					"dir": "src/test/java/basic/demo/AppTest.java",
-					"duration": 3,
-					"success": 100
-				}
-			],
-			"duplications": [
-				{
-					"density": 28.2,
-					"duplicate_lines": 22,
-					"duplicate_files": 1,
-					"duplicate_blocks": 2
-				}
-			],
-			"done": true
-		}
-	],
-	"total_pages": {"value": 2},
-	"pages": [
-		{
-			"id": 1,
-			"projects": [
-				{
-					"id": 1,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 2,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 3,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 4,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 5,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 6,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 7,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 8,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 9,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 10,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				}
-			]
-		},
-		{
-			"id": 2,
-			"projects": [
-				{
-					"id": 11,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 12,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 13,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 14,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 15,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 16,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 17,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 18,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				},
-				{
-					"id": 19,
-					"name": "Simple Java Ant Project",
-					"bugs": [],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": true
-				},
-				{
-					"id": 20,
-					"name": "Simple Java Gradle Project",
-					"bugs": [
-						{
-							"name": "The return value of \"toString\" must be used."
-						}
-					],
-					"codeSmells": [
-						{
-							"name": "Use a logger to log this exception."
-						},
-						{
-							"name": "2 duplicated blocks of code must be removed"
-						}
-					],
-					"debt": {
-						"rating": "B",
-						"debt_ratio": 9.5,
-						"effort_to_reach_A": 66,
-						"debt": 139
-					},
-					"coverage": {
-						"lines_to_cover": 28,
-						"uncovered_lines": 26,
-						"line_coverage": 7.1,
-						"coverage": 7.1
-					},
-					"unitTests": [
-						{
-							"dir": "src/test/java/basic/demo/AppTest.java",
-							"duration": 3,
-							"success": 100
-						}
-					],
-					"duplications": [
-						{
-							"density": 28.2,
-							"duplicate_lines": 22,
-							"duplicate_files": 1,
-							"duplicate_blocks": 2
-						}
-					],
-					"done": false
-				}
-			]
-		}
-	]
+  "contacts": [
+    {
+      "id": 1,
+      "first_name": "Cuong",
+      "last_name": "Do",
+      "email": "cuongdo@gmail.com",
+      "phone": "0908998923",
+      "address": "HCMC"
+    },
+    {
+      "id": "2",
+      "first_name": "sdasdasdas",
+      "last_name": "asdsd",
+      "email": "cuong12312123@mulodo.com",
+      "phone": "sdsdsd",
+      "address": "sdsdsd"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "name": "Simple Java Gradle Project",
+      "bugs": [
+        {
+          "name": "The return value of \"toString\" must be used."
+        }
+      ],
+      "codeSmells": [
+        {
+          "name": "Use a logger to log this exception."
+        },
+        {
+          "name": "2 duplicated blocks of code must be removed"
+        }
+      ],
+      "debt": {
+        "rating": "B",
+        "debt_ratio": 9.5,
+        "effort_to_reach_A": 66,
+        "debt": 139
+      },
+      "coverage": {
+        "lines_to_cover": 28,
+        "uncovered_lines": 26,
+        "line_coverage": 7.1,
+        "coverage": 7.1
+      },
+      "unitTests": [
+        {
+          "dir": "src/test/java/basic/demo/AppTest.java",
+          "duration": 3,
+          "success": 100
+        }
+      ],
+      "duplications": [
+        {
+          "density": 28.2,
+          "duplicate_lines": 22,
+          "duplicate_files": 1,
+          "duplicate_blocks": 2
+        }
+      ],
+      "done": false
+    },
+    {
+      "id": 2,
+      "name": "Simple Java Ant Project",
+      "bugs": [],
+      "codeSmells": [
+        {
+          "name": "Use a logger to log this exception."
+        },
+        {
+          "name": "2 duplicated blocks of code must be removed"
+        }
+      ],
+      "debt": {
+        "rating": "B",
+        "debt_ratio": 9.5,
+        "effort_to_reach_A": 66,
+        "debt": 139
+      },
+      "coverage": {
+        "lines_to_cover": 28,
+        "uncovered_lines": 26,
+        "line_coverage": 7.1,
+        "coverage": 7.1
+      },
+      "unitTests": [
+        {
+          "dir": "src/test/java/basic/demo/AppTest.java",
+          "duration": 3,
+          "success": 100
+        }
+      ],
+      "duplications": [
+        {
+          "density": 28.2,
+          "duplicate_lines": 22,
+          "duplicate_files": 1,
+          "duplicate_blocks": 2
+        }
+      ],
+      "done": true
+    }
+  ],
+  "total_pages": {
+    "value": 2
+  },
+  "pages": [
+    {
+      "id": 1,
+      "projects": [
+        {
+          "id": 1,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 2,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 3,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 4,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 5,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 6,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 7,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 8,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 9,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 10,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "projects": [
+        {
+          "id": 11,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 12,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 13,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 14,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 15,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 16,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 17,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 18,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        },
+        {
+          "id": 19,
+          "name": "Simple Java Ant Project",
+          "bugs": [],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": true
+        },
+        {
+          "id": 20,
+          "name": "Simple Java Gradle Project",
+          "bugs": [
+            {
+              "name": "The return value of \"toString\" must be used."
+            }
+          ],
+          "codeSmells": [
+            {
+              "name": "Use a logger to log this exception."
+            },
+            {
+              "name": "2 duplicated blocks of code must be removed"
+            }
+          ],
+          "debt": {
+            "rating": "B",
+            "debt_ratio": 9.5,
+            "effort_to_reach_A": 66,
+            "debt": 139
+          },
+          "coverage": {
+            "lines_to_cover": 28,
+            "uncovered_lines": 26,
+            "line_coverage": 7.1,
+            "coverage": 7.1
+          },
+          "unitTests": [
+            {
+              "dir": "src/test/java/basic/demo/AppTest.java",
+              "duration": 3,
+              "success": 100
+            }
+          ],
+          "duplications": [
+            {
+              "density": 28.2,
+              "duplicate_lines": 22,
+              "duplicate_files": 1,
+              "duplicate_blocks": 2
+            }
+          ],
+          "done": false
+        }
+      ]
+    }
+  ]
 }

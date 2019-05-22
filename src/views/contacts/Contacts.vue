@@ -53,12 +53,12 @@
 
 <script>
 
-import {ContactService} from '../services/contactservice'
+import {ContactService} from '@/services/contactservice'
 const contactService = new ContactService(); //create new instance
 
-import concat from '../filters/default/concat'; //filter
+import concat from '@/filters/default/concat'; //filter
 
-import {firstMissingID} from '../services/helper' //helper function
+import {firstMissingID} from '@/services/helper' //helper function
 
 export default {
     name: 'Contacts',

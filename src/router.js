@@ -1,13 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Customers from './views/Customers.vue'
-import CustomerDetails from './views/CustomerDetails.vue'
-import Contacts from './views/Contacts.vue'
-import Contact from './views/Contact.vue'
-import SonarQube from './views/SonarQube.vue'
-import SonarQubePagination from './views/SonarQubePagination.vue'
-import Project from './views/Project.vue'
-import SearchProjects from './views/SearchProjects.vue'
+import Customers from './views/customers/Customers.vue'
+import CustomerDetails from './views/customers/CustomerDetails.vue'
+import Contacts from './views/contacts/Contacts.vue'
+import Contact from './views/contacts/Contact.vue'
+import SonarQube from './views/sonarqube/SonarQube.vue'
+import SonarQubePagination from './views/sonarqube/SonarQubePagination.vue'
+import Project from './views/sonarqube/Project.vue'
+import SearchProjects from './views/sonarqube/SearchProjects.vue'
+
+//import {ROUTER_SonarQube} from '@/config/const'
+//import {ROUTER_SonarQubePagination} from '@/config/const'
+//import {ROUTER_Project} from '@/config/const'
+import {ROUTER_SearchProjects} from '@/config/const'
 
 Vue.use(Router)
 
@@ -53,8 +58,18 @@ const router =  new Router({
       component: Project
     },
     {
-      path: '/search-projects',
+      path: `${ROUTER_SearchProjects}`,
       name: 'search-projects',
+      component: SearchProjects
+    },
+    {
+      path: `${ROUTER_SearchProjects}/:keyword`,
+      name: 'search-projects-keyword',
+      component: SearchProjects
+    },
+    {
+      path: `${ROUTER_SearchProjects}:keyword/:page`,
+      name: 'search-projects-keyword-page',
       component: SearchProjects
     }
   ]

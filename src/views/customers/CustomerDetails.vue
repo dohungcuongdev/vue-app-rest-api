@@ -15,7 +15,7 @@
 
 <div class="home">
     <div class="vue-logo-back">
-        <img src="../assets/logo.png" width="100px" height="100px">
+        <img src="@/assets/logo.png" width="100px" height="100px">
     </div>
     <div class="card" v-if="customerDetails.id">
         <div class="card-header">

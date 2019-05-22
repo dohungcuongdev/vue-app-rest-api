@@ -33,6 +33,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 1. https://medium.com/@marshallswain/debugging-a-new-vue-cli-app-with-vs-code-ade4945e75f0
 
-2. https://vuejs.org/v2/cookbook/debugging-in-vscode.html
+2. https://vuejs.o@cookbook/debugging-in-vscode.html
 
 3. https://github.com/aditya-sridhar/simple-vuejs-app

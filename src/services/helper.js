@@ -29,3 +29,29 @@ export const firstMissingID = function(objs) {
     }
     return firstMissingPositive(nums);
 };
+
+export const isArray = function (value) {
+    return !hasNoValue() && (value && typeof value === 'object' && value.constructor === Array);
+}
+
+export const isObject = function (value) {
+    return !hasNoValue() && (value && typeof value === 'object' && value.constructor === Object);
+}
+
+export const isArrayOrObject = function (value) {
+    return isArray(value) || isObject(value);
+}
+
+// Returns if a value is null
+export const isNull = function (value) {
+    return value === null;
+}
+    
+// Returns if a value is undefined
+export const isUndefined = function (value) {
+    return typeof value === 'undefined';
+}
+
+export const hasNoValue = function (value) {
+    return isNull(value) || isUndefined(value);
+}

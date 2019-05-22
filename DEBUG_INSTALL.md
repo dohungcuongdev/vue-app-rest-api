@@ -2,7 +2,7 @@
 
 1. https://medium.com/@marshallswain/debugging-a-new-vue-cli-app-with-vs-code-ade4945e75f0
 
-2. https://vuejs.org/v2/cookbook/debugging-in-vscode.html
+2. https://vuejs.o@cookbook/debugging-in-vscode.html
 
 
 

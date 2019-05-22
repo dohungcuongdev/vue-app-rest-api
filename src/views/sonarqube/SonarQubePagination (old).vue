@@ -12,20 +12,8 @@ button.non-active {
   <div>
     <h1>List Projects</h1>
     <table class="table table-bordered table-hover">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Name</th>
-          <th>Bugs</th>
-          <th>Code Smells</th>
-          <th>Debt</th>
-          <th>Coverage</th>
-          <th>Unit Tests</th>
-          <th>Duplications</th>
-          <th>Done</th>
-        </tr>
-      </thead>
-        <listproject v-bind:currentPage="currentPage"></listproject>
+      <table-header></table-header>
+      <list-projects-pagination v-bind:currentPage="currentPage"></list-projects-pagination>
     </table>
 
     <button @click="prevPage">
@@ -46,9 +34,10 @@ button.non-active {
 
 <script>
 
-import ListProjectsPagination from './ListProjectsPagination'
+import ListProjectsTableHeader from '@/components/sonarqube/ListProjectsTableHeader'
+import ListProjectsPagination from '@/components/sonarqube/ListProjectsPagination'
 
-import {ProjectService} from '../services/projectservice'
+import {ProjectService} from '@/services/projectservice'
 const projectService = new ProjectService(); //create new instance
 const API_URL = 'http://localhost:3000/total_pages';
 projectService.changeApiUrlTo(API_URL);
@@ -56,11 +45,13 @@ projectService.changeApiUrlTo(API_URL);
 export default {
     name: 'SonarQubePagination',
     components: {
-        'listproject': ListProjectsPagination
+        'list-projects-pagination': ListProjectsPagination,
+        'table-header': ListProjectsTableHeader,
     },
     data() {
         return {
             totalPages: this.getToTalPage(),
+            //totalPages: 10,
             currentPage: 1  // default to page 1
         }
     },

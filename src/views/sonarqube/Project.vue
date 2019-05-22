@@ -50,7 +50,7 @@
 
 <script>
 
-import {ProjectService} from '../services/projectservice'
+import {ProjectService} from '@/services/projectservice'
 const projectService = new ProjectService(); //create new instance
 
 export default {

@@ -15,7 +15,7 @@
 
 <div class="home">
     <div class="vue-logo-back">
-        <img src="../assets/logo.png" width="100px" height="100px">
+        <img src="@/assets/logo.png" width="100px" height="100px">
     </div>
     <div class="col-md-6 centeralign">
         <p>This Page Displays a list of customers</p>
@@ -28,7 +28,7 @@
         <br/>
         <router-link to="sonar-qube/1" v-if="this.$route.path !== '/sonar-qube/1'">Go to Sonar Qube Pagination page</router-link>
         <br/>
-        <router-link to="search-projects" v-if="this.$route.path !== 'search-projects'">Go to Search Projects page</router-link>
+        <router-link :to="ROUTER_SearchProjects" v-if="this.$route.path !== this.ROUTER_SearchProjects">Go to Search Projects page</router-link>
         <div class="card centeralign addmargin" style="width: 18rem;" v-for="customer in customerlist" :key="customer.id">
             <div class="card-body" v-on:click="setSelectedCustomer(customer.name)">
                 <h5 class="card-title">{{customer.name}}</h5>
@@ -47,8 +47,10 @@
 <script>
 
 // @ is an alias to /src
-import Display from '@/components/Display.vue'
+import Display from '@/components/customers/Display.vue'
 import axios from 'axios'
+
+import {ROUTER_SearchProjects} from '@/config/const'
 
 export default {
     name: 'customers',
@@ -66,7 +68,8 @@ export default {
     data() {
         return {
             customerlist: [],
-            selectedCustomer: ""
+            selectedCustomer: "",
+            ROUTER_SearchProjects: ROUTER_SearchProjects
         }
     },
     components: {

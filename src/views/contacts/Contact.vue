@@ -33,17 +33,17 @@ td.input-id {
         <tr>
 
           <td v-if="hasNoValue(contact.id)"><input class="input-id" type="id" ref="id" :value="$route.params.id"></td>
-          <td v-else><input class="input-id" type="id" ref="id" :value="contact.id" readonly></td>
+          <td v-else><input class="input-id" type="id" ref="id" v-model="contact.id" readonly></td>
 
-          <td><input type="first_name" ref="first_name" :value="contact.first_name"></td>
+          <td><input type="first_name" ref="first_name" v-model="contact.first_name"></td>
 
-          <td><input type="last_name" ref="last_name" :value="contact.last_name"></td>
+          <td><input type="last_name" ref="last_name" v-model="contact.last_name"></td>
 
-          <td><input type="email" ref="email" :value="contact.email"></td>
+          <td><input type="email" ref="email" v-model="contact.email"></td>
 
-          <td><input type="phone" ref="phone" :value="contact.phone"></td>
+          <td><input type="phone" ref="phone" v-model="contact.phone"></td>
 
-          <td><input type="address" ref="address" v-bind:value="contact.address"></td>
+          <td><input type="address" ref="address" v-model="contact.address"></td>
 
           <td v-if="hasNoValue(contact.id)"><button @click.prevent="saveContact('add')">Add</button></td>
           <td v-else><button @click.prevent="saveContact('update')">Update</button></td>
@@ -60,10 +60,10 @@ td.input-id {
 <script>
 import Contacts from './Contacts.vue'
 
-import {ContactService} from '../services/contactservice'
+import {ContactService} from '@/services/contactservice'
 const contactService = new ContactService(); //create new instance
 
-import concat from '../filters/default/concat';
+import concat from '@/filters/default/concat';
 
 export default {
     name: 'Contact',
@@ -109,14 +109,20 @@ export default {
                 alert('Last Name is required')
                 return false;
             }
+            var reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            if(!((e == "")? false : (reg.test(e)) ? true : false)) {
+              alert('Email is not valid');
+              return false;
+            }
             let newContact = {"id": i, "first_name": f, "last_name": l, "email": e, "phone": p, "address": a};
             if(action === 'add') {
                 contactService.addContact(newContact).then((response) => {
                     if(response) {
                         alert("Contact was added");
-                          this.$router.replace({ path: '/contacts' })
-                        }
+                        this.$router.replace({ path: '/contacts' })
+                      }
                     }, error => {
+                        alert("Fail to add, Server response error " + error);
                         // eslint-disable-next-line
                         console.error(error);
                     });
@@ -125,9 +131,10 @@ export default {
                 contactService.editContact(newContact).then((response) => {
                     if(response) {
                         this.contact = newContact;
-                          alert("Contact was edited");
-                        }
+                        alert("Contact was edited");
+                      }
                     }, error => {
+                        alert("Fail to update, Server response error " + error);
                         // eslint-disable-next-line
                         console.error(error);
                     });
@@ -135,7 +142,7 @@ export default {
         },
         hasNoValue(obj) {
             return obj == null || obj === '';
-        }
+        },
     },
     mounted() {
         this.testInherite();

@@ -8,11 +8,13 @@
     <input type="project_name" ref="project_name" placeholder="Project Name">
     <button @click.prevent="searchProjects()">Search</button>
 
-    <searchresults></searchresults>
+    <hr/>
+    <button @click.prevent="viewAllProjects()">View All</button>
+    
 </div>
 </template>
 <script>
-import { ProjectService } from "../services/projectservice";
+import { ProjectService } from "@/services/projectservice";
 const projectService = new ProjectService(); //create new instance
 const SEARCH_API_URL = "http://localhost:3000/search_results";
 
@@ -22,6 +24,7 @@ export default {
   name: "SearchProjects",
   data() {
     return {
+      keyword: '',
       projects: []
     };
   },
@@ -46,6 +49,9 @@ export default {
           console.error(error);
         }
       );
+    },
+    viewAllProjects() {
+      this.$router.replace({ path: '/sonar-qube/1' })
     }
   },
   mounted() {

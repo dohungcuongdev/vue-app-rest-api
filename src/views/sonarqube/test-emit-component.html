@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>VueJs Introduction</title>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <style>
+        body {
+            width: 800px;
+            margin: 0 auto;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+    <script type="text/javascript">
+        var childcomp = Vue.extend({
+            props: ["myname"],
+            template: `<div>Childs myname prop value: {{myname}}    <button @click="updatename">Click to update child prop and emit back to parent</button></div>`,
+            methods: {
+                updatename: function () {
+                    this.myname = "new name";
+                    this.$emit("nameupdated", this.myname);
+                }
+            }
+        });
+
+        Vue.component("parent", {
+            components: { child: childcomp },
+            template: `<div>Parents data name value: {{name}} <hr><child :myname="name" @nameupdated="name=$event"></child></div>`,
+            data: function () {
+                return { name: "original name" };
+            }
+        });
+
+        new Vue({
+            el: "#app",
+            template: "<div><parent></parent></div>"
+        });
+    </script>
+</body>
+
+</html>
