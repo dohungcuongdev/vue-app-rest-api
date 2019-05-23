@@ -1,17 +1,7 @@
-<style>
-button.active-page {
-  color: brown
-}
-
-button.non-active {
-  color: blue;
-}
-</style>
-
 <template>
   <div>
     <h1>List Projects</h1>
-    <table-pagination :listData="projects" :headers="headers" :listProperties="listProperties" :totalPages="totalPages" :routerPath="routerPath" @currentPageUpdated="currentPage=$event"></table-pagination>
+    <table-pagination :projects="projects" :totalPages="totalPages" :routerPath="routerPath" @currentPageUpdated="currentPage=$event"></table-pagination>
     <router-link :to="{ path: '/customers'}" replace v-if="this.$route.path !== '/customers'">Go to Customers page</router-link>
     <div></div>
   </div>
@@ -19,13 +9,7 @@ button.non-active {
 
 <script>
 
-import TablePagination from '@/components/sonarqube/TablePagination'
-
-import ListProjectsTableHeader from '@/components/sonarqube/ListProjectsTableHeader'
-import ListProjectsPagination from '@/components/sonarqube/ListProjectsPagination'
-
-import {PROJECTS_HEADER} from '@/config/const'
-import {PROJECTS_PROPERTIES} from '@/config/const'
+import TableProjectsPagination from '@/components/sonarqube/TableProjectsPagination'
 
 import {ProjectService} from '@/services/projectservice'
 const projectService = new ProjectService(); //create new instance
@@ -36,15 +20,13 @@ const ROUTER_PATH = '/sonar-qube/'
 export default {
     name: 'SonarQubePagination',
     components: {
-        'table-pagination': TablePagination
+        'table-pagination': TableProjectsPagination
     },
     data() {
         return {
             totalPages: 0,
             //totalPages: 10,
             projects: [],
-            headers: PROJECTS_HEADER,
-            listProperties: PROJECTS_PROPERTIES,
             currentPage: Number,
             routerPath: ROUTER_PATH
         }
@@ -59,8 +41,8 @@ export default {
           Client then fetch these APIs from server to display using a sub-component
           This approach will improve the performence if the data is terrific
         */
-        getToTalPage() {
-          projectService.changeApiUrlTo(API_TOTAL_PAGES);
+        getToTalPage() {this.totalPages=25;
+          /*projectService.changeApiUrlTo(API_TOTAL_PAGES);
           projectService.getData().then((response) => {
               this.totalPages = response.value;
               // eslint-disable-next-line
@@ -68,7 +50,7 @@ export default {
           }, error => {
               // eslint-disable-next-line
               console.error(error);
-          });
+          });*/
         },
         getAllProjectsAtPage() {
             projectService.changeApiUrlTo(API_PROJECTS_PAGE);
@@ -81,20 +63,22 @@ export default {
                 console.error(error);
                 this.projects = [];
             });
-        }, 
+        },
+        refreshServerData() {
+          this.getAllProjectsAtPage();
+          this.getToTalPage();
+        },
         onChildClick (value) {
             // pass value from child to parent
             this.currentPage = value
-        }
+        },
     },
     mounted() {
         // eslint-disable-next-line
         console.log("SonarQubePagination: mounted was called");
 
         // mounted from child component is called before parent component
-        this.getAllProjectsAtPage();
-        this.getToTalPage();
-        console.log(PROJECTS_PROPERTIES)
+        this.refreshServerData();
     },
     /* Fetching After Navigation*/
     watch: { 
@@ -105,8 +89,7 @@ export default {
 
         // watch from child component is called after parent component
         this.currentPage = this.$route.params.page; // without this line, it will be error if user press address bar
-        this.getAllProjectsAtPage();
-        this.getToTalPage();
+        this.refreshServerData();
       }
     },
 }

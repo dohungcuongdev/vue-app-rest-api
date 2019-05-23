@@ -68,10 +68,10 @@ const router =  new Router({
       component: SearchProjects
     },
     {
-      path: `${ROUTER_SearchProjects}:keyword/:page`,
+      path: `${ROUTER_SearchProjects}/:keyword/:page`,
       name: 'search-projects-keyword-page',
       component: SearchProjects
-    }
+    },
   ]
 })
 export default router

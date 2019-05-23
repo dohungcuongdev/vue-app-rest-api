@@ -145,6 +145,14 @@ export default {
         },
     },
     mounted() {
+      /* Called after the instance has been mounted, where el is replaced by the newly created vm.$el. If the root instance is mounted to an in-document element, vm.$el will also be in-document when mounted is called.
+        Note that mounted does not guarantee that all child components have also been mounted. If you want to wait until the entire view has been rendered, you can use vm.$nextTick inside of mounted:
+        mounted: function () {
+          this.$nextTick(function () {
+            // Code that will run only after the
+            // entire view has been rendered
+          })
+        }*/
         this.testInherite();
         this.getSingeContact();
     },
@@ -164,6 +172,17 @@ export default {
        problem in CustomerDetails Component
        */
     },
+    destyoyed() {
+      /*Called after a Vue instance has been destroyed. When this hook is called, 
+      all directives of the Vue instance have been unbound,
+      all event listeners have been removed, and all child Vue instances have also been destroyed.*/
+    },
+    errorCaptured() {
+      /*Called when an error from any descendent component is captured. 
+      The hook receives three arguments: the error, the component instance that triggered the error, 
+      and a string containing information on where the error was captured. 
+      The hook can return false to stop the error from propagating further*/
+    }
 }
 
 </script>

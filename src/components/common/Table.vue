@@ -1,5 +1,5 @@
 <template>
-    <table class="table table-bordered table-hover">
+    <table class="table table-bordered table-hover" v-if="listData.length > 0">
         <table-header :headers="headers"></table-header>
         <table-body :listData="listData" :listProperties="listProperties"></table-body>
     </table>
@@ -20,9 +20,9 @@ export default {
             required: true
         },
         listProperties: {
-          type: Array[String],
-          required: false,
-          default: null
+           type: Array[String],
+           required: false,
+           default: null
         }
     },
     components: {

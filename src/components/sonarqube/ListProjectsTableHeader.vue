@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import TableHeader from './TableHeader'
+import TableHeader from '../common/TableHeader'
 import {PROJECTS_HEADER} from '@/config/const'
 export default {
     name: 'ListProjectsTableHeader',

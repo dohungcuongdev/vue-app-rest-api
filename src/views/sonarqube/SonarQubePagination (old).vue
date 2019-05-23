@@ -50,7 +50,7 @@ export default {
     },
     data() {
         return {
-            totalPages: this.getToTalPage(),
+            totalPages: 0,
             //totalPages: 10,
             currentPage: 1  // default to page 1
         }
@@ -101,6 +101,9 @@ export default {
           }
           return "non-active";
         }
+    },
+    mounted() {
+        this.getToTalPage();
     },
     /* Fetching After Navigation*/
     watch: { 

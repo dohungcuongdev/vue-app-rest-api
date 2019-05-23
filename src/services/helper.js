@@ -55,3 +55,7 @@ export const isUndefined = function (value) {
 export const hasNoValue = function (value) {
     return isNull(value) || isUndefined(value);
 }
+
+export const isNotPositiveNumber = function (value) {
+    return value == null || isNaN(value) || value <= 0;
+}
