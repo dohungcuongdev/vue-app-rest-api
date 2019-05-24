@@ -7,6 +7,8 @@
     <h5>{{testcapitalize | capitalize}}</h5>
     <h5>{{testconcat | concat('arg1', 'arg1')}}</h5>
     -->
+    <contacts-child></contacts-child>
+    <input v-focus type="text" id="container" v-model="testvfocuse">
     <table class="table table-bordered table-hover">
       <thead>
         <tr>
@@ -60,6 +62,10 @@ import concat from '@/filters/default/concat'; //filter
 
 import {firstMissingID} from '@/services/helper' //helper function
 
+import {mymixin} from '../../mixins/mymixin';
+
+import ContactsChild from './ContactsChild.vue'
+
 export default {
     name: 'Contacts',
     data() {
@@ -67,11 +73,13 @@ export default {
             contacts: [],
             testalluppercase: "test all uppercase",
             testcapitalize: "test capitalize",
-            testconcat: "test concat"
+            testconcat: "test concat",
+            testvfocuse: "test v focuse"
         }
     },
+    mixins: [mymixin],
     components: {
-        
+        "contacts-child": ContactsChild
     },  
     filters: { // register filters
       concat
@@ -111,12 +119,48 @@ export default {
         testInherite() {
           // eslint-disable-next-line
           console.log("Test Inherite")
-        }
+          this.testMyMixin();
+        },
 
     },
+    created() {
+      this.$nextTrick = function() {
+        console.log("Contacts: nextTrick in created was called");
+      }
+      console.log("Contacts: created was called");
+    },
+    beforeMount() {
+      console.log("Contacts: beforeMount was called");
+    },
     mounted() {
-        this.getAllContacts();
-    }
+      this.$nextTrick = function() {
+        console.log("Contacts: nextTrick in mounted was called");
+      }
+      console.log("Contacts: mounted was called");
+      this.getAllContacts();
+      this.testInherite();
+    },
+    beforeUpdate() {
+      console.log("Contacts: beforeUpdate was called");
+    },
+    updated() {
+      console.log("Contacts: updated was called");
+    },
+    activated() {
+      console.log("Contacts: activated was called");
+    },
+    deactivated() {
+      console.log("Contacts: deactivated was called");
+    },
+    beforeDestroy() {
+      console.log("Contacts: beforeDestroy was called");
+    },
+    destroyed() {
+      console.log("Contacts: destroyed was called");
+    },
+    errorCaptured() {
+      console.log("Contacts: errorCaptured was called");
+    },
 }
 
 </script>

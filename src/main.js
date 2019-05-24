@@ -6,12 +6,16 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import './filters/global/capitalize.js' // global filter
 import './filters/global/alluppercase.js' // global filter
-import './filters/global/vforbe.js' // global filter
+import './directives/v-focus.js' // global directive
+import './directives/v-logger.js' // global directive
 
 Vue.config.productionTip = false
 Vue.use(BootstrapVue);
 
-new Vue({
+var vm = new Vue({
   router,
+  customOption: 'cuong',
   render: h => h(App)
 }).$mount('#app')
+
+console.log(vm.$options.customOption); //test $options

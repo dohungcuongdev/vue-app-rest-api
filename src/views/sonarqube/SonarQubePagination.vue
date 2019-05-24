@@ -25,7 +25,6 @@ export default {
     data() {
         return {
             totalPages: 0,
-            //totalPages: 10,
             projects: [],
             currentPage: Number,
             routerPath: ROUTER_PATH
@@ -41,8 +40,9 @@ export default {
           Client then fetch these APIs from server to display using a sub-component
           This approach will improve the performence if the data is terrific
         */
-        getToTalPage() {this.totalPages=25;
-          /*projectService.changeApiUrlTo(API_TOTAL_PAGES);
+        getToTalPage() {
+          //this.totalPages=25;
+          projectService.changeApiUrlTo(API_TOTAL_PAGES);
           projectService.getData().then((response) => {
               this.totalPages = response.value;
               // eslint-disable-next-line
@@ -50,10 +50,11 @@ export default {
           }, error => {
               // eslint-disable-next-line
               console.error(error);
-          });*/
+          });
         },
         getAllProjectsAtPage() {
             projectService.changeApiUrlTo(API_PROJECTS_PAGE);
+            console.log(this.currentPage);
             projectService.getDataBy(this.currentPage).then((response) => {
                 this.projects = response.projects;
                 // eslint-disable-next-line
@@ -83,12 +84,22 @@ export default {
     /* Fetching After Navigation*/
     watch: { 
       // call again the method if the route changes
-      '$route': function() {
+      /*'$route': function() {
         // eslint-disable-next-line
         console.log("SonarQubePagination: watch was called");
 
         // watch from child component is called after parent component
         this.currentPage = this.$route.params.page; // without this line, it will be error if user press address bar
+        this.refreshServerData();
+      },*/
+
+      $route (to, from){
+        // eslint-disable-next-line
+        console.log("SonarQubePagination: watch was called - route changed");
+        console.log(from);
+        console.log(to);
+        let page = this.$route.params.page;
+        this.currentPage = parseInt(page); // without this line, it will be error if user press address bar
         this.refreshServerData();
       }
     },

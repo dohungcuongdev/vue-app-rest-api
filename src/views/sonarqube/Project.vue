@@ -4,6 +4,15 @@
     <h4>Name</h4>
     <h5>{{ project.name }}</h5>
 
+    <!-- 
+    You may face this problem
+    
+    v-if="bug.name && bug.name.length > 0" will do the trick.
+    Your data is empty when component is mounted (because you get it asynchronously), 
+    so you need an additional guard.
+
+    -->
+
     <h4>Bugs</h4>
     <h5>{{ project.bugs.length }}</h5>
     <h5 v-for="bug in project.bugs" :key="bug.name">{{ bug.name }}</h5>
