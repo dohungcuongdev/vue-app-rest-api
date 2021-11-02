@@ -1,5 +1,7 @@
 # vue-app-rest-api
 
+HOW TO START
+
 ## Project setup
 ```
 npm install
